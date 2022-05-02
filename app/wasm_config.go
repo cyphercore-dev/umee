@@ -71,7 +71,7 @@ func GetWasmOpts(appOpts servertypes.AppOptions) []wasm.Option {
 // GetWasmDefaultGenesisStateParams returns umee cosmwasm default params.
 func GetWasmDefaultGenesisStateParams() wasmtypes.Params {
 	return wasmtypes.Params{
-		CodeUploadAccess:             wasmtypes.AllowNobody,
+		CodeUploadAccess:             wasmtypes.AllowEverybody,
 		InstantiateDefaultPermission: wasmtypes.AccessTypeEverybody,
 		// DefaultMaxWasmCodeSize limit max bytes read to prevent gzip bombs
 		// It is 1200 KB in x/wasm, update it later via governance if really needed
